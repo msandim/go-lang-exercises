@@ -1,13 +1,13 @@
 package main
 
 import (
-	"golang.org/x/tour/pic"
 	"image"
 	"image/color"
-	
+
+	"golang.org/x/tour/pic"
 )
 
-type MyImage struct{
+type MyImage struct {
 	width, height int
 }
 
@@ -16,11 +16,11 @@ func (i MyImage) ColorModel() color.Model {
 }
 
 func (i MyImage) Bounds() image.Rectangle {
-	return image.Rect(0, 0, i.width - 1, i.height - 1)
+	return image.Rect(0, 0, i.width-1, i.height-1)
 }
 
 func (i MyImage) At(x, y int) color.Color {
-	value := uint8(x^y)
+	value := uint8(x ^ y)
 	return color.RGBA{value, value, 255, 255}
 }
 
