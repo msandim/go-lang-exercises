@@ -12,4 +12,4 @@
 *.out
 
 # Debug files
-go-tour/webcrawler/debug
+debug
